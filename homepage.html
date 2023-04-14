@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home page</title>
+	<link rel="stylesheet" type="text/css" href="homepage.css">
+</head>
+<body>
+    <div id="merge" >
+        <div id="input">
+            <h3>Here you can enter 10 numbers to be sorted:</h3>
+            <p> Please, press Add Numbers</p>
+            <button onclick="sortNumbers()">Add Numbers</button>
+        </div>
+       <div id="output"></div>
+    </div>
+    <div id="palindrome">
+        <h3>Check if a word is a palindrome:</h3>
+        <input type="text" id="word">
+        <button onclick="checkPalindrome()">Check</button>
+    </div>
+    
+    <div id="prime">
+        <h3>Check if your age is prime:</h3>
+        <input type="text" id="yearOfBirth">
+        <button onclick="checkAge()">Check</button>
+        <div id="result"></div>
+    </div>
+
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <script src="functions.js"></script>  
+    </body>
+</html>

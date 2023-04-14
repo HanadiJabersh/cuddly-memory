@@ -7,7 +7,7 @@ function validateForm() {
     var gender = document.querySelector('input[name="gender"]:checked');
     var dob = document.getElementById("dob");
     
-
+    event.preventDefault()
     if (password.length < 8) {
         alert("Password must be at least 8 characters long.");
         return false;
@@ -38,9 +38,10 @@ function validateForm() {
     gender: gender.value,
     dob: dob.value
   };
-  console.log(formData);
-      // If all checks pass, return true
+      window.location.href = "homepage.html";
       return true;
+      
     }
+
 
    
