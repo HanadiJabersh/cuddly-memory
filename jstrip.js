@@ -1,51 +1,46 @@
 function validateForm() {
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
+    var nameIn = document.getElementById("name");
+    var emailIn = document.getElementById("email");
+    var email=emailIn.value;
+    var passwordIn = document.getElementById("password");
+    var password=passwordIn.value;
     var gender = document.querySelector('input[name="gender"]:checked');
-    var dobInput = document.getElementById("dob");
-    var nameError = document.getElementById("nameError");
-    var emailError = document.getElementById("emailError");
-    var passwordError = document.getElementById("passwordError");
-    var genderError = document.getElementById("genderError");
-    var isValid = true;
+    var dob = document.getElementById("dob");
+    
+
+    if (password.length < 8) {
+        alert("Password must be at least 8 characters long.");
+        return false;
+      }
+    
+      // Check for at least one special character
+      const specialChars = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+      if (!specialChars.test(password)) {
+        alert("Password must contain at least one special character.");
+        return false;
+      }
+    
+      // Check for at least one uppercase letter
+      const uppercaseChars = /[A-Z]/;
+      if (!uppercaseChars.test(password)) {
+        alert("Password must contain at least one uppercase letter.");
+        return false;
+      }
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert("Please enter a valid email address.");
+    return false;
+  }
+  const formData = {
+    Name: nameIn.value,
+    Email: emailIn.value,
+    password: passwordIn.value,
+    gender: gender.value,
+    dob: dob.value
+  };
+  console.log(formData);
+      // If all checks pass, return true
+      return true;
+    }
 
    
-    if (name == "") {
-      nameError.innerHTML = "Name is required";
-      isValid = false;
-    } else {
-      nameError.innerHTML = "";
-    }
-  
-    if (email == "") {
-      emailError.innerHTML = "Email is required";
-      isValid = false;
-    } else {
-      emailError.innerHTML = "";
-    }
-  
-    if (password == "") {
-      passwordError.innerHTML = "Password is required";
-      isValid = false;
-    } else {
-      passwordError.innerHTML = "";
-    }
-  
-    if (!gender) {
-      genderError.innerHTML = "Gender is required";
-      isValid = false;
-    } else {
-      genderError.innerHTML = "";
-    }
-  
-    if (address == "") {
-      addressError.innerHTML = "Address is required";
-      isValid = false;
-    } else {
-      addressError.innerHTML = "";
-    }
-  
-    return isValid;
-  }
-  
