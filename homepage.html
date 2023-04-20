@@ -8,7 +8,6 @@
     <div id="merge" >
         <div id="input">
             <h3>Here you can enter 10 numbers to be sorted:</h3>
-            <p> Please, press Add Numbers</p>
             <button onclick="sortNumbers()">Add Numbers</button>
         </div>
        <div id="output"></div>
@@ -33,9 +32,16 @@
         <button onclick="ReverseString()">Reverse</button>
         <div id="output1"></div>
     </div>
-    <div id ="ip"><button onclick="getIPAddress()">Get my IP address</button>
+   
+    <div id ="ip">
+        <h3>Here you can get the ip address:</h3>
+        <button onclick="getIPAddress()">Get my IP address</button>
      </div>
-    <div><button onclick="scrollToTop()">Back to Top</button></div>
+     <div id = "loc">
+        <h3>Here you can get the location:</h3>
+        <button onclick="getLocation()">Get Location</button>
+        <div id="location"></div></div>
+    <div id="top"><button onclick="scrollToTop()">Back to Top</button></div>
 
     <script src="functions.js"></script>  
     </body>
