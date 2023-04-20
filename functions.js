@@ -87,24 +87,15 @@ function checkAge() {
     }
 }}
 
-function reverseString(str) {
-    let chars = str.split('');
-    let reversedChars = chars.reverse();
-    let reversedStr = reversedChars.join('');
-    console.log(reverseString);
-    return reversedStr;
-  }
-  function reverseInput() {
-   let inputBox = document.getElementById('input');
-   let outputDiv = document.getElementById('output1');
-   let inputStr = inputBox.value;
-   if (!inputStr) {
-    outputDiv.innerText = "Please enter a string!";
-    return;
-  }
-   let reversedStr = reverseString(inputStr);
-    outputDiv.innerHTML = reversedStr;
+function ReverseString() {
+    let inputString = document.getElementById("inputString").value;
+    let reversedString = "";
+    if (inputString.length > 0) {
+      let reversedArray = inputString.split("").reverse();
+      reversedString = reversedArray.join("");
+    }
+    console.log(reversedString);
+    output1=document.getElementById("output1");
+    output1.innerHTML += '<p>Ther reversed string is ' + reversedString+'</p>';
 
-  }
-  const reverseButton = document.getElementById('reverse-button');
-  reverseButton.addEventListener('click', reverseInput);
+}
