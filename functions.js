@@ -96,6 +96,24 @@ function ReverseString() {
     }
     console.log(reversedString);
     output1=document.getElementById("output1");
-    output1.innerHTML += '<p>Ther reversed string is ' + reversedString+'</p>';
+    output1.innerHTML += '<p>The reversed string is ' + reversedString+'</p>';
 
 }
+function scrollToTop() {
+    window.scrollTo(0, 0);
+  }
+
+
+function getIPAddress() {
+    fetch("https://api.ipify.org?format=json")
+      .then(response => response.json())
+      .then(data => {
+        console.log("Your IP address is:", data.ip);
+        const div = document.createElement("div");
+        const label = document.createElement("label");
+        label.textContent = `Your IP address is: ${data.ip}`;
+        div.appendChild(label);
+        document.getElementById("ip").appendChild(div);
+      })
+      .catch(error => console.error(error));
+  }

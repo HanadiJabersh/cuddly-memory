@@ -11,17 +11,23 @@ body {
   }
   #palindrome{
     position: absolute;
-    top:30%;
+    top:25%;
     left:50%;
     transform: translate(-50%,-50%);
   }
   #prime{
     position: absolute;
-    top:50%;
+    top:40%;
     left:50%;
     transform: translate(-50%,-50%);
   }
   #reverse{
+    position: absolute;
+    top:55%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+  #ip{
     position: absolute;
     top:70%;
     left:50%;
