@@ -1,4 +1,4 @@
-function merge(leftArr, rightArr) {
+ function merge(leftArr, rightArr) {
     let sortedArr = [];
     while (leftArr.length && rightArr.length) {
         if (leftArr[0] < rightArr[0]) {
@@ -72,6 +72,11 @@ function isPrime(num) {
 
 function checkAge() {
     const birthYear = document.getElementById('yearOfBirth').value;
+    if (isNaN(birthYear)) {
+        alert('Please enter a number!');
+        return;
+    }
+    else{
     const result = document.getElementById('result');
     const currentYear = new Date().getFullYear();
     const age = currentYear - birthYear;
@@ -80,4 +85,26 @@ function checkAge() {
     } else {
         result.innerHTML += '<p>Your age is ' + age + ' and it is not a prime number.</p>';
     }
-}
+}}
+
+function reverseString(str) {
+    let chars = str.split('');
+    let reversedChars = chars.reverse();
+    let reversedStr = reversedChars.join('');
+    console.log(reverseString);
+    return reversedStr;
+  }
+  function reverseInput() {
+   let inputBox = document.getElementById('input');
+   let outputDiv = document.getElementById('output1');
+   let inputStr = inputBox.value;
+   if (!inputStr) {
+    outputDiv.innerText = "Please enter a string!";
+    return;
+  }
+   let reversedStr = reverseString(inputStr);
+    outputDiv.innerHTML = reversedStr;
+
+  }
+  const reverseButton = document.getElementById('reverse-button');
+  reverseButton.addEventListener('click', reverseInput);
