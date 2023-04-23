@@ -2,9 +2,11 @@
 <html>
 <head>
 	<title>Home page</title>
-	<link rel="stylesheet" type="text/css" href="homepage.css">
+	<link rel="stylesheet" type="text/css" href="st.css">
 </head>
 <body>
+    <div id="main-container">
+     <div class="container">
     <div id="merge" >
         <div id="input">
             <h3>Here you can enter 10 numbers to be sorted:</h3>
@@ -25,7 +27,12 @@
         <div id="result"></div>
     </div>
 
-    <div></div>
+    <div>
+        <h3>Enter a number to calculate its Factorial:</h3>
+        <input type="number" id="number">
+        <button onclick="calculateFactorial()">Calculate</button>
+        <p id="fact"></p>
+    </div>
     <div id ="reverse">
         <h3>Here I reverse your string:</h3>
         <input type="text" id="inputString">
@@ -42,7 +49,8 @@
         <button onclick="getLocation()">Get Location</button>
         <div id="location"></div></div>
     <div id="top"><button onclick="scrollToTop()">Back to Top</button></div>
-
+</div>
+</div>
     <script src="functions.js"></script>  
     </body>
 </html>

@@ -132,4 +132,20 @@ function getIPAddress() {
     const div = document.getElementById("location");
     div.innerHTML = `<p>Latitude: ${latitude}</p><p>Longitude: ${longitude}</p>`;
   }
- 
+  function calculateFactorial() {
+    var num = document.getElementById("number").value;
+  
+    if (num < 0) {
+      document.getElementById("fact").textContent = "Factorial of negative number does not exist.";
+    } else if (num === "" || num === null) {
+      document.getElementById("fact").textContent = "Please enter a number.";
+    } else {
+      num = parseInt(num);
+      var result = 1;
+      for (var i = 1; i <= num; i++) {
+        result *= i;
+      }
+      document.getElementById("fact").textContent = "Factorial of " + num + " is " + result + ".";
+    }
+  }
+  
